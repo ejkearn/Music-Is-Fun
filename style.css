@@ -1,4 +1,5 @@
 .pageBg{
+
     background: slategray;
 }
 .audioCard{
@@ -7,12 +8,18 @@
     background: lightgray;
     
 }
+.songImgBg{
+    background-image: url(play.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .songImg{
+
     height: auto;
     width: auto;
 }
 .songImg:hover{
-    opacity: 0.4;
-    filter: alpha(opacity=40); 
-    background-color: #000;
+    opacity: .4;
+
 }

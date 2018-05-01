@@ -1,6 +1,7 @@
 function ItunesController() {
   var itunesService = new ItunesService()
   //Do Not Modify the getMusic function
+
   this.getMusic = function getMusic(e) {
     e.preventDefault();
     var artist = e.target.artist.value;
@@ -14,7 +15,8 @@ function ItunesController() {
       var card = results[i];
       var custImg = card.albumArt.replace('100x100', '250x250')
       template += `<div class="card audioCard text-center" >
-      <img class="card-img-top songImg" src="${custImg}" alt="Card image cap" onclick="app.controllers.itunesCtrl.playPause('${card.preview}')">
+      <div class="songImgBg">
+      <img class="card-img-top songImg" src="${custImg}" alt="Card image cap" onclick="app.controllers.itunesCtrl.playPause('${card.preview}')"></div>
       <div class="card-body">
         <h5 class="card-title">Song Title: ${card.title}</h5>
         <p class="card-text">Artist: ${card.artist}</p>
@@ -58,4 +60,7 @@ function ItunesController() {
     playing = false
   }
 
+  this.unhide = function unhide(){
+    document.getElementById('hiddenSearch').classList.remove('d-none');
+  }
 }

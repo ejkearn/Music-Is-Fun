@@ -11,9 +11,9 @@
 </head>
 
 <body class="pageBg">
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+    <form class="form-inline d-none" id="hiddenSearch"onsubmit="app.controllers.itunesCtrl.getMusic(event)">
         <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
+        <div class="form-group ">
             <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
             <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
             
@@ -21,9 +21,26 @@
     </form>
     <!-- <button type="submit" onclick="app.controllers.itunesCtrl.previewClick('nothing')"class="btn btn-primary" id="test">test</button> -->
     <div id="songs" class="row">
-        <!-- <div class="col d-flex ">
+        <div class="col">
+                <div class="jumbotron text-center">
+                        <h1 class="display-4">Mustic Artist Finder</h1>
+                        <p class="lead">This app will find you songs by artist.</p>
+                        <hr class="my-4">
+                        <p>It uses the Itunes api to find songs and lets you play a short preview!</p>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-4">
 
-        </div> -->
+                                <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event); app.controllers.itunesCtrl.unhide() ">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                                            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                                            </div>
+                                        </form>
+                            </div>
+                        </div>
+                      </div>
+
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="itunes-service.js"></script>
