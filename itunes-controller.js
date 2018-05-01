@@ -21,7 +21,7 @@ function ItunesController() {
         <h5 class="card-title">Song Title: ${card.title}</h5>
         <p class="card-text">Artist: ${card.artist}</p>
         <p class="card-text">Collection: ${card.collection}</p>
-        <p class="card-text">Price: ${card.price}</p>
+        <p class="card-text">Price: $${card.price}</p>
 
       </div>
     </div>`
