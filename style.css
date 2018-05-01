@@ -1,0 +1,18 @@
+.pageBg{
+    background: slategray;
+}
+.audioCard{
+    width: 33%;
+    /* height: 30 rem; */
+    background: lightgray;
+    
+}
+.songImg{
+    height: auto;
+    width: auto;
+}
+.songImg:hover{
+    opacity: 0.4;
+    filter: alpha(opacity=40); 
+    background-color: #000;
+}
